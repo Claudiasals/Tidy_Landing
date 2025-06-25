@@ -1,0 +1,360 @@
+
+/* reset stile default browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*padding e bordo vengono inclusi in width e height*/
+}
+
+body {
+    font-family: "Inter";
+    line-height: 1.6;
+    /* aumentare interlinea */
+}
+
+.wrapper {
+    width: 100%;
+    color: rgb(20, 29, 43);
+}
+
+.white {
+    color: rgb(20, 29, 43);
+    
+}
+
+.blue {
+    background-color: rgb(18, 29, 44);
+    color: rgb(253, 253, 253);
+   
+}
+
+.grey {
+    background-color: rgb(242, 245, 249);
+    color: rgb(31, 41, 59);
+  
+}
+
+.container {
+    max-width: 1150px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 1.25rem;  
+   /* gap: 10px; se lo aggiungo per non doverlo ripetere, 
+   si sballano le colonne "robust workflow"*/
+   /*padding-bottom: 120px; come lo levo però dalla navbar?*/
+
+}
+
+.wrap {
+    flex-wrap: wrap;
+    /* per impostare la funzione flex calc 100%/3 */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(154, 165, 193);
+}
+
+a {
+    /*per togliere lo stile di default e apportare modifiche di stile*/
+    text-decoration: none;
+    color: rgb(154, 165, 193);
+}
+
+a:hover {
+    color: rgb(55, 118, 226);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: rgb(55, 118, 226);
+    width: 180px;
+    height: 50px;
+    border-radius: 2px;
+    color: aliceblue;
+    font-size: 16px;
+    border: none;
+}
+
+.button-explore {
+    background-color: rgb(52, 65, 86);
+    margin: 12px;
+}
+
+.clip-path {
+   padding-bottom: 80px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+} 
+
+/* NAVBAR */
+
+
+
+.nav__logo-svg {
+    width: 2.25rem;
+    height: auto;
+    fill: rgb(55, 118, 226);
+}
+
+.nav__menu {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.nav__actions .nav__actions-item {
+    padding: 16px;
+    /* meglio il paddng o lo spazio tra gli elementi "gap"?*/
+    white-space: nowrap;
+    /* per non fare andare a capo il testo */
+}
+
+.nav__menu .nav__menu-item {
+    padding: 16px;
+    white-space: nowrap;
+    /* per non fare andare a capo il testo */
+}
+
+/* HEADER */
+
+.header__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__right {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header__left-title {
+    min-width: 490px;
+    /* Ma come si fa a rendere veramente responsive? a far spostare gli elementi 
+    in verticale quando si restringe la finestra? ho messo la larghezza minima 
+    per bloccare la larghezzza del box a minimo 500px, in % meglio? 
+    o cosa si dovrebbe usare per ottenere quell effetto? */
+}
+
+.built {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.build__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.build__buttons-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+
+/* The quick brown fox jumped over the lazy dog */
+
+.features__body {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; non funge */
+    padding: 20px;
+}
+
+.features__features-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* justify-content: space-around; non funge */
+}
+
+.internal-feedback {
+    width: 600px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+}
+
+.main__card {
+    display: flex;
+    flex: calc(100% / 3);
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    /*perché se aggiungo il padding alle main__card mi si spostano i bottoni dell'header?*/
+}
+
+.fa-solid.fa-circle-user {
+    /* come si ingrandiscono le icone? direttamente dal sito? */
+    width: 50px;
+}
+
+/*qualcosa non quadra nella sezione cta*/
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* per centrare anche il contenuto di cta__top. si è centrato, si può togliere altrove align center? */
+.card__trial {
+    text-align: center;
+}
+
+.card__trial-input {
+    align-items: center;
+
+}
+
+/*
+.cta__trial-card {
+    display: flex;
+    width: 350px;
+    height: auto;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}*/
+
+.card__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card__trial-body {
+    width: 300px;
+    margin: 1rem;
+    text-align: left;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+
+.card__separator {
+    background-color: rgb(221, 221, 221);
+    max-lines: 80%;
+    /*per lasciare lo spaio ai lati*/
+    /*perché se scrivo "width:80%" parte da sinistra e lascia lo spazio solo a destra anch con "align:center?"*/
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    /* e niente il logo e il titolo restano separati */
+}
+
+
+.footer__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* perché i 4 menu nel footer non occupano tutto lo spazio del footer__menu?*/
+    white-space: nowrap;
+    /* per non fare andare a capo il testo */
+    gap: 60px;
+    /* Spaziatura tra gli elementi dentro a qst elemento*/
+}
+
+
+.footer__menu-htw {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__menu-resources {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__menu-products {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__menu-company {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /*perché non si allarga fino alla fine della larghezza del genitore?*/
+}
+
+.footer__title-logo {
+    width: 30px;
+    height: auto;
+}
+
+svg {
+    fill: rgb(55, 118, 226);
+
+}
+
+#request {
+    color: aliceblue;
+}
