@@ -152,12 +152,14 @@ button {
 /* HEADER */
 
 .header__left {
+   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .header__right {
+
     display: flex;
     flex-direction: row;
 
