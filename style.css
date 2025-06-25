@@ -17,6 +17,8 @@ body {
     color: rgb(20, 29, 43);
 }
 
+
+
 .white {
     color: rgb(20, 29, 43);
 
@@ -35,7 +37,7 @@ body {
 }
 
 .container {
-    max-width: 1150px;
+    max-width: 1280px;
     display: flex;
     margin: 0 auto;
     padding: 0 1.25rem;
@@ -119,6 +121,12 @@ button {
 
 /* NAVBAR */
 
+.navbar__container {
+    max-width: 1280px;
+    margin: 0 auto;    /* per centrare */
+    padding: 20px 30px; /* perché non prende?*/
+    display: flex;
+  }
 
 
 .nav__logo-svg {
