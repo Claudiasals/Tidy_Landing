@@ -19,9 +19,13 @@ html body {
 .wrapper {
     width: 100%;
     color: rgb(20, 29, 43);
+    padding-top: 1.5rem;
+ 
 }
 
+.header__right {
 
+}
 
 .white {
     color: rgb(20, 29, 43);
@@ -34,10 +38,15 @@ html body {
 
 }
 
+.blue p { 
+    color: rgb(158, 167, 199);
+    /* font-weight: 700; */ 
+    font-size: 22px;
+
+}
 .grey {
     background-color: rgb(242, 245, 249);
     color: rgb(31, 41, 59);
-
 }
 
 .container {
@@ -45,15 +54,21 @@ html body {
     display: flex;
     margin: 0 auto;
     padding: 0 1.25rem;
+    gap: 3rem;
     /* gap: 10px; se lo aggiungo per non doverlo ripetere, 
    si sballano le colonne "robust workflow"*/
     /*padding-bottom: 120px; come lo levo però dalla navbar?*/
-
+    padding-top: 70px;
 }
-
-.wrap {
-    flex-wrap: wrap;
-    /* per impostare la funzione flex calc 100%/3 */
+.container__grey {
+    max-width: 830px;
+    display: flex;
+    margin: 0 auto;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 h1,
@@ -61,18 +76,19 @@ h2,
 h3,
 h4 {
     font-family: "Playfair Display", serif;
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: 64px;
-   /* word-wrap: break-word; non lo prende per far andare a capo 
+    font-size: 68px;
+    /* word-wrap: break-word; non lo prende per far andare a capo 
    i titoli qnd stringo finestra */
 }
 
 h2 {
     font-size: 48px;
     text-align: center;
- /* word-wrap: break-word; non lo prende per far andare a capo 
+    /* word-wrap: break-word; non lo prende per far andare a capo 
    i titoli qnd stringo finestra */
 }
 
@@ -80,13 +96,20 @@ h3 {
     font-size: 32px;
 }
 
-span {
-    font-weight: bold;
+h4 {
+    font-size: 26px;
+}
+
+.bold {
+    font-weight: bold; 
 }
 
 p {
     font-size: 20px;
-    color: rgb(154, 165, 193);
+    color: rgb(99, 108, 134);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
 }
 
 a {
@@ -103,13 +126,17 @@ li {
     list-style: none;
 }
 
+i {
+    padding: 0.5rem;
+    color: rgb(135, 171, 202);
+}
 button {
     background-color: rgb(55, 118, 226);
-    width: 180px;
-    height: 50px;
-    border-radius: 2px;
-    color: aliceblue;
-    font-size: 16px;
+    width: 200px;
+    height: 55px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
     border: none;
 }
 
@@ -119,24 +146,22 @@ button {
 }
 
 .clip-path {
-    padding-bottom: 80px;
+    
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    padding-bottom: 15rem;
+    padding-top: 5rem;
 }
 
 /* NAVBAR */
 
 .navbar__container {
     max-width: 1280px;
-    margin: 0 auto;    /* per centrare */
-    padding: 20px 30px; /* perché non prende?*/
-    display: flex;
-  }
-
-
-.nav__logo-svg {
-    width: 2.25rem;
-    height: auto;
-    fill: rgb(55, 118, 226);
+    margin: 0 auto;
+    /* per centrare */
+    padding: 0 28px;
+    display: flex; 
+    align-items: center;
+    padding-bottom: 2rem;
 }
 
 .nav__menu {
@@ -146,27 +171,64 @@ button {
     align-items: center;
 }
 
-.nav__actions {
+.nav__menu {
     display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__logo-svg {
+    width: 2.5rem;
+    height: auto;
+    fill: rgb(55, 118, 226);
+    margin-right: 1rem;
+
+}
+
+.nav__actions {
+   
+    display: flex; 
     flex-direction: row;
     justify-content: end;
+    align-items: center;
+    gap: 24px; 
 }
 
 .nav__actions .nav__actions-item {
-    padding: 16px;
+    padding: 0;
     /* meglio il paddng o lo spazio tra gli elementi "gap"?*/
     white-space: nowrap;
     /* per non fare andare a capo il testo */
 }
 
 .nav__menu .nav__menu-item {
-    padding: 16px;
+    padding: 1.25rem;
     white-space: nowrap;
     /* per non fare andare a capo il testo */
 }
 
+/*
+.nav__menu-item a,
+.nav__actions-item a {
+  font-weight: 600; 
+}
+
+*/
+
 /* HEADER */
 
+header {
+    padding-bottom: 5rem;
+}
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
 .header__left {
 
     display: flex;
@@ -182,12 +244,42 @@ button {
 }
 
 .header__left-title {
-    min-width: 490px;
+    width: 540px;
     /* Ma come si fa a rendere veramente responsive? a far spostare gli elementi 
     in verticale quando si restringe la finestra? ho messo la larghezza minima 
     per bloccare la larghezzza del box a minimo 500px, in % meglio? 
     o cosa si dovrebbe usare per ottenere quell effetto? */
 }
+.header__left-p {
+    max-width: 540px; /*perché non lo prendeeeee???*/
+}
+
+
+/* MAIN */
+
+.wrap {
+    flex-wrap: wrap;
+    /* per impostare la funzione flex calc 100%/3 - il gap (2 perché il cap è tra 
+    le colonne e non ai lati, quindi 1 rem x 2 spazi intercolonne */
+}
+
+.main__card {
+    display: flex;
+    width: calc((100% / 3) - 2rem);
+    flex-direction: column;
+    margin-bottom: 5rem;
+  
+    
+
+}
+
+.main__card svg {
+    display: block;        /* Elimina lo spazio "di linea di base" */
+    margin-bottom: 1rem;   /* Se vuoi uno spazio sotto */
+    width: 4rem;
+    height: 4rem;
+  }
+
 
 .built {
     display: flex;
@@ -195,9 +287,8 @@ button {
     text-align: center;
 }
 
-.build__img img { 
-    width: 768px;
-    height: 464px;
+.build__img img {
+    width: 100%;
     box-shadow: 0 16px 22px rgba(0, 0, 0, 0.2);
     /* 0 = spostamento orizzontale, 
     16 = spostamento verso il basso, 22 = sfocatura,
@@ -207,22 +298,32 @@ button {
 .build__buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .build__buttons-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding-bottom: 40px;
 }
 
+.round-svg {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 5px 5px rgba(47, 47, 47, 0.2);
+      /* 0 = spostamento orizzontale, 
+    5 = spostamento verso il basso, 10 = sfocatura,
+    rgba 0,2 = 90% di opacità */
+    margin-bottom: 10px;
+}
 
 /* The quick brown fox jumped over the lazy dog */
 
 .features__title {
-padding-bottom: 80px;
- }
+    padding-bottom: 80px;
+}
 
 .features__body {
     display: flex;
@@ -238,7 +339,7 @@ padding-bottom: 80px;
 }
 
 .features__left img {
-    width: 33.75rem; 
+    width: 33.75rem;
     height: 38.75rem;
 }
 
@@ -249,6 +350,7 @@ padding-bottom: 80px;
     align-items: start;
     flex-direction: column;
 }
+
 .features__right-list {
     display: flex;
     flex-direction: column;
@@ -265,14 +367,42 @@ padding-bottom: 80px;
     margin: 10px;
 }
 
-.main__card {
+.simply__container {
     display: flex;
-    flex: calc(100% / 3);
     flex-direction: column;
-    margin-bottom: 70px;
-
-    /*perché se aggiungo il padding alle main__card mi si spostano i bottoni dell'header?*/
+    text-align: center;
 }
+
+.simply__container-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+   
+}
+
+.card2 {
+    width: 33.3%;
+    height: auto;
+    background-color: aliceblue;
+    margin: 2rem;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .fa-solid.fa-circle-user {
     /* come si ingrandiscono le icone? direttamente dal sito? */
