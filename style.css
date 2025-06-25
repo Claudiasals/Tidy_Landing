@@ -12,6 +12,10 @@ body {
     /* aumentare interlinea */
 }
 
+html body {
+    font-size: 18px;
+}
+
 .wrapper {
     width: 100%;
     color: rgb(20, 29, 43);
