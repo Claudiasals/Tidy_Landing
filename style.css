@@ -6,8 +6,16 @@
     /*padding e bordo vengono inclusi in width e height*/
 }
 
+:root {
+--font-family-base: 'Inter', sans-serif;
+--font-family-title: "Playfair Display", serif;
+--color-background-blue: rgb(18, 29, 44);
+--color-background-white: rgb(255, 255, 255);
+--color-background-grey: rgb(242, 245, 249);
+}
+
 body {
-    font-family: "Inter";
+    font-family: var(--font-family-base);
     line-height: 1.6;
     /* aumentare interlinea */
 }
@@ -20,7 +28,6 @@ html body {
     width: 100%;
     color: rgb(20, 29, 43);
     padding-top: 1.5rem;
- 
 }
 
 .header__right {
@@ -29,13 +36,12 @@ html body {
 
 .white {
     color: rgb(20, 29, 43);
-
+    background-color: var(--color-background-white);
 }
 
 .blue {
-    background-color: rgb(18, 29, 44);
+    background-color:var(--color-background-blue);
     color: rgb(253, 253, 253);
-
 }
 
 .blue p { 
@@ -75,7 +81,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-family-title);
     line-height: 1.2;
 }
 
@@ -329,7 +335,6 @@ header {
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; non funge */
-
 }
 
 .features__left {
@@ -378,8 +383,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-
-   
 }
 
 .card2 {
@@ -387,8 +390,6 @@ header {
     height: auto;
     background-color: aliceblue;
     margin: 2rem;
-    
-
 }
 
 
