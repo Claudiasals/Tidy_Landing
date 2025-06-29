@@ -12,6 +12,11 @@
 --color-background-blue: rgb(18, 29, 44);
 --color-background-white: rgb(255, 255, 255);
 --color-background-grey: rgb(242, 245, 249);
+--color-blue:  rgb(31, 41, 59);
+--color-white: rgb(253, 253, 253);
+--color-grey: rgb(158, 167, 199);
+--color-hover: rgb(55, 118, 226);
+--color-paragraph: rgb(99, 108, 134);
 }
 
 body {
@@ -26,7 +31,7 @@ html body {
 
 .wrapper {
     width: 100%;
-    color: rgb(20, 29, 43);
+    color: var(--color-blue);
     padding-top: 1.5rem;
 }
 
@@ -35,24 +40,24 @@ html body {
 }
 
 .white {
-    color: rgb(20, 29, 43);
+    color: var(--color-blue);
     background-color: var(--color-background-white);
 }
 
 .blue {
     background-color:var(--color-background-blue);
-    color: rgb(253, 253, 253);
+    color:var(--color-white)
 }
 
 .blue p { 
-    color: rgb(158, 167, 199);
+    color: var(--color-grey);
     /* font-weight: 700; */ 
     font-size: 22px;
 
 }
 .grey {
-    background-color: rgb(242, 245, 249);
-    color: rgb(31, 41, 59);
+    background-color: var(--color-background-grey);
+    color: var(--color-blue);
 }
 
 .container {
@@ -112,7 +117,7 @@ h4 {
 
 p {
     font-size: 20px;
-    color: rgb(99, 108, 134);
+    color: var(--color-paragraph);
     padding-top: 1rem;
     padding-bottom: 1rem;
 
@@ -125,7 +130,7 @@ a {
 }
 
 a:hover {
-    color: rgb(55, 118, 226);
+    color: var(--color-hover);
 }
 
 li {
@@ -246,6 +251,8 @@ header {
 
     display: flex;
     flex-direction: row;
+    position: relative;
+    display: inline-block; /* o block */
 
 }
 
@@ -260,13 +267,25 @@ header {
     max-width: 540px; /*perché non lo prendeeeee???*/
 }
 
-
+.before::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px solid #797676; /* Il bordo che fa da quadro */
+   
+}
+  
 /* MAIN */
 
 .wrap {
+    display: flex;
     flex-wrap: wrap;
     /* per impostare la funzione flex calc 100%/3 - il gap (2 perché il cap è tra 
     le colonne e non ai lati, quindi 1 rem x 2 spazi intercolonne */
+    justify-content: center; 
 }
 
 .main__card {
@@ -274,9 +293,6 @@ header {
     width: calc((100% / 3) - 2rem);
     flex-direction: column;
     margin-bottom: 5rem;
-  
-    
-
 }
 
 .main__card svg {
@@ -363,13 +379,20 @@ header {
 }
 
 .internal-feedback {
-    width: 600px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.internal-feedback__item {
+    display: flex;
+    flex-direction: row;
 }
 
 .simply__container {
@@ -385,24 +408,36 @@ header {
     width: 100%;
 }
 
+
+
+
+
+.statistics__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.statistics__body {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.statistics__img {
+
+
+}
+
+
+
 .card2 {
     width: 33.3%;
     height: auto;
     background-color: aliceblue;
     margin: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .fa-solid.fa-circle-user {

@@ -87,8 +87,10 @@
                 </div>
             </div>
             <div class="header__right">
-                <img class="header__right-img" src="https://preview.cruip.com/tidy/images/hero-image-01.jpg" width="580"
-                    height="445" alt="Hero">
+                <div class="before">
+                    <img class="header__right-img" src="https://preview.cruip.com/tidy/images/hero-image-01.jpg"
+                        width="580" height="445" alt="Hero">
+                </div>
             </div>
         </div>
 
@@ -98,7 +100,7 @@
     <!--main-->
     <main>
         <section class="wrapper white">
-            <div class="container wrap container__padding">
+            <div class="container wrap ">
                 <div class="main__card">
                     <svg>
                         <rect class="blue-circle" width="64" height="64" rx="32"></rect>
@@ -250,38 +252,45 @@
                                 anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.</p>
                             <div class="features__right-list">
 
-
                                 <div class="internal-feedback">
-                                    <a href="#">
+                                    <a class="internal-feedback__item">
                                         <i class="fa-solid fa-thumbtack"></i>
-                                        <h4>Internal Feedback</h4> Duis aute irure dolor in reprehenderit in voluptate
-                                        velit
-                                        esse cillum dolore eu
-                                        fugiat
-                                        nulla pariatur velit.</p>
+                                        <div class="internal-feedback__right">
+                                            <h5>Internal Feedback</h5>
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate
+                                                velit
+                                                esse cillum dolore eu
+                                                fugiat
+                                                nulla pariatur velit.</p>
+                                        </div>
                                     </a>
                                 </div>
 
                                 <div class="internal-feedback">
-                                    <a href="#">
+                                    <a class="internal-feedback__item">
                                         <i class="fa-solid fa-thumbtack"></i>
-                                        <h4>Internal Feedback</h4> Duis aute irure dolor in reprehenderit in voluptate
-                                        velit
-                                        esse cillum dolore eu
-                                        fugiat
-                                        nulla pariatur velit.</p>
+                                        <div class="internal-feedback__right">
+                                            <h5>Internal Feedback</h5>
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate
+                                                velit
+                                                esse cillum dolore eu
+                                                fugiat
+                                                nulla pariatur velit.</p>
+                                        </div>
                                     </a>
                                 </div>
 
-
                                 <div class="internal-feedback">
-                                    <a href="#">
+                                    <a class="internal-feedback__item">
                                         <i class="fa-solid fa-thumbtack"></i>
-                                        <h4>Internal Feedback</h4> Duis aute irure dolor in reprehenderit in voluptate
-                                        velit
-                                        esse cillum dolore eu
-                                        fugiat
-                                        nulla pariatur velit.</p>
+                                        <div class="internal-feedback__right">
+                                            <h5>Internal Feedback</h5>
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate
+                                                velit
+                                                esse cillum dolore eu
+                                                fugiat
+                                                nulla pariatur velit.</p>
+                                        </div>
                                     </a>
                                 </div>
 
@@ -308,7 +317,7 @@
                                 1
                             </text>
                         </svg>
-                        <img src="" alt="ragazza" />
+                        <img src="https://preview.cruip.com/tidy/images/features-home-3-02.jpg" alt="ragazza" width="342" height="342"/>
 
                         <a href="">Advanced Features</a>
                         <p>Lorem ipsum is placeholder text used in the graphic, print, and publishing for previewing
@@ -323,7 +332,8 @@
                                 2
                             </text>
                         </svg>
-                        <img src="" alt="ragazze che ridono" />
+                        <img src="https://preview.cruip.com/tidy/images/features-home-3-02.jpg"
+                            alt="ragazze che ridono" width="342" height="342"/>
 
                         <a href="">Advanced Features</a>
                         <p>Lorem ipsum is placeholder text used in the graphic, print, and publishing for previewing
@@ -338,7 +348,8 @@
                                 3
                             </text>
                         </svg>
-                        <img src="" alt="donne in ufficio" />
+                        <img src="https://preview.cruip.com/tidy/images/features-home-3-02.jpg"
+                            alt="donne in ufficio" width="342" height="342" />
                         <a href="">Advanced Features</a>
                         <p>Lorem ipsum is placeholder text used in the graphic, print, and publishing for previewing
                             layouts.</p>
@@ -353,31 +364,37 @@
         <section class="wrapper white">
             <div class="container">
                 <div class="statistics">
-                    <h2>We're experts and brand creators</h2>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.</p>
-                    <div class="statistics__list">
-                        <div class="statistics__list-list-item">
-                            <i class="fa-solid fa-worm"></i>
-                            <h4>79%</h4>
-                            <p> Lorem ipsum is placeholder text used in the graphic, print, and publishing for
-                                previewing layouts.</p>
+                    <div class="statistics__title">
+                        <h2>We're experts and brand creators</h2>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.</p>
+                    </div>
+                    <div class="statistics__body">
+                        <div class="statistics__list">
+                            <div class="statistics__list-list-item">
+                                <i class="fa-solid fa-worm"></i>
+                                <h4>79%</h4>
+                                <p> Lorem ipsum is placeholder text used in the graphic, print, and publishing for
+                                    previewing layouts.</p>
+                            </div>
+                            <div class="statistics__list-list-item">
+                                <i class="fa-solid fa-worm"></i>
+                                <h4>1M+</h4>
+                                <p> Lorem ipsum is placeholder text used in the graphic, print, and publishing for
+                                    previewing layouts.</p>
+                            </div>
+                            <div class="statistics__list-list-item">
+                                <i class="fa-solid fa-worm"></i>
+                                <h4>500K</h4>
+                                <p> Lorem ipsum is placeholder text used in the graphic, print, and publishing for
+                                    previewing layouts.</p>
+                            </div>
                         </div>
-                        <div class="statistics__list-list-item">
-                            <i class="fa-solid fa-worm"></i>
-                            <h4>1M+</h4>
-                            <p> Lorem ipsum is placeholder text used in the graphic, print, and publishing for
-                                previewing layouts.</p>
-                        </div>
-                        <div class="statistics__list-list-item">
-                            <i class="fa-solid fa-worm"></i>
-                            <h4>500K</h4>
-                            <p> Lorem ipsum is placeholder text used in the graphic, print, and publishing for
-                                previewing layouts.</p>
-                        </div>
-                        <div class="statistics__img">
-                            <img src="" alt="immagini con 3 foto di persone" />
-                        </div>
+
+                            <div class="statistics__img">
+                                <img src="https://preview.cruip.com/tidy/images/target.png"
+                                    alt="immagini con 3 foto di persone" width="540px" height="540px" />
+                            </div>
                     </div>
                 </div>
             </div>
