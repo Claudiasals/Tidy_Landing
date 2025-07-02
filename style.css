@@ -7,16 +7,16 @@
 }
 
 :root {
---font-family-base: 'Inter', sans-serif;
---font-family-title: "Playfair Display", serif;
---color-background-blue: rgb(18, 29, 44);
---color-background-white: rgb(255, 255, 255);
---color-background-grey: rgb(242, 245, 249);
---color-blue:  rgb(31, 41, 59);
---color-white: rgb(253, 253, 253);
---color-grey: rgb(158, 167, 199);
---color-hover: rgb(55, 118, 226);
---color-paragraph: rgb(99, 108, 134);
+    --font-family-base: 'Inter', sans-serif;
+    --font-family-title: "Playfair Display", serif;
+    --color-background-blue: rgb(18, 29, 44);
+    --color-background-white: rgb(255, 255, 255);
+    --color-background-grey: rgb(242, 245, 249);
+    --color-blue: rgb(31, 41, 59);
+    --color-white: rgb(253, 253, 253);
+    --color-grey: rgb(158, 167, 199);
+    --color-hover: rgb(55, 118, 226);
+    --color-paragraph: rgb(99, 108, 134);
 }
 
 body {
@@ -35,26 +35,23 @@ html body {
     padding-top: 1.5rem;
 }
 
-.header__right {
-
-}
-
 .white {
     color: var(--color-blue);
     background-color: var(--color-background-white);
 }
 
 .blue {
-    background-color:var(--color-background-blue);
-    color:var(--color-white)
+    background-color: var(--color-background-blue);
+    color: var(--color-white)
 }
 
-.blue p { 
+.blue p {
     color: var(--color-grey);
-    /* font-weight: 700; */ 
+    /* font-weight: 700; */
     font-size: 22px;
 
 }
+
 .grey {
     background-color: var(--color-background-grey);
     color: var(--color-blue);
@@ -71,6 +68,7 @@ html body {
     /*padding-bottom: 120px; come lo levo però dalla navbar?*/
     padding-top: 70px;
 }
+
 .container__grey {
     max-width: 830px;
     display: flex;
@@ -112,7 +110,7 @@ h4 {
 }
 
 .bold {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 p {
@@ -120,7 +118,10 @@ p {
     color: var(--color-paragraph);
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
 
+p.internal {
+    font-size: 18px;
 }
 
 a {
@@ -137,10 +138,6 @@ li {
     list-style: none;
 }
 
-i {
-    padding: 0.5rem;
-    color: rgb(135, 171, 202);
-}
 button {
     background-color: rgb(55, 118, 226);
     width: 200px;
@@ -157,10 +154,20 @@ button {
 }
 
 .clip-path {
-    
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     padding-bottom: 15rem;
-    padding-top: 5rem;
+    padding-top: 1rem;
+}
+
+.separator {
+    background-color: rgb(230, 228, 228);
+    margin: 100px;
+    /*per lasciare lo spaio ai lati*/
+    /*perché se scrivo "width:80%" parte da sinistra e lascia lo spazio solo a destra anch con "align:center?"*/
+    height: 1px;
+    max-width: 1280px;
+
+
 }
 
 /* NAVBAR */
@@ -170,9 +177,8 @@ button {
     margin: 0 auto;
     /* per centrare */
     padding: 0 28px;
-    display: flex; 
+    display: flex;
     align-items: center;
-    padding-bottom: 2rem;
 }
 
 .nav__menu {
@@ -198,12 +204,12 @@ button {
 }
 
 .nav__actions {
-   
-    display: flex; 
+
+    display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: 24px; 
+    gap: 24px;
 }
 
 .nav__actions .nav__actions-item {
@@ -240,6 +246,7 @@ header {
 
 
 }
+
 .header__left {
 
     display: flex;
@@ -252,7 +259,8 @@ header {
     display: flex;
     flex-direction: row;
     position: relative;
-    display: inline-block; /* o block */
+    display: inline-block;
+    /* o block */
 
 }
 
@@ -263,21 +271,28 @@ header {
     per bloccare la larghezzza del box a minimo 500px, in % meglio? 
     o cosa si dovrebbe usare per ottenere quell effetto? */
 }
-.header__left-p {
-    max-width: 540px; /*perché non lo prendeeeee???*/
-}
+
 
 .before::before {
     content: "";
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    border: 2px solid #797676; /* Il bordo che fa da quadro */
-   
+    top: 10px;
+    /*sposto da sopra a sotto*/
+    left: 15px;
+    /*sposto a sinistra verso destra*/
+    width: 100%;
+    height: 100%;
+    border: 2px solid #797676;/* Il bordo che fa da quadro */
 }
-  
+
+.header__right-img {
+
+    position: relative;
+    width: 100%;
+height: auto;
+
+}
+
 /* MAIN */
 
 .wrap {
@@ -285,7 +300,7 @@ header {
     flex-wrap: wrap;
     /* per impostare la funzione flex calc 100%/3 - il gap (2 perché il cap è tra 
     le colonne e non ai lati, quindi 1 rem x 2 spazi intercolonne */
-    justify-content: center; 
+    justify-content: center;
 }
 
 .main__card {
@@ -296,11 +311,13 @@ header {
 }
 
 .main__card svg {
-    display: block;        /* Elimina lo spazio "di linea di base" */
-    margin-bottom: 1rem;   /* Se vuoi uno spazio sotto */
+    display: block;
+    /* Elimina lo spazio "di linea di base" */
+    margin-bottom: 1rem;
+    /* Se vuoi uno spazio sotto */
     width: 4rem;
     height: 4rem;
-  }
+}
 
 
 .built {
@@ -335,7 +352,7 @@ header {
     width: 60px;
     height: 60px;
     box-shadow: 0 5px 5px rgba(47, 47, 47, 0.2);
-      /* 0 = spostamento orizzontale, 
+    /* 0 = spostamento orizzontale, 
     5 = spostamento verso il basso, 10 = sfocatura,
     rgba 0,2 = 90% di opacità */
     margin-bottom: 10px;
@@ -393,6 +410,7 @@ header {
 .internal-feedback__item {
     display: flex;
     flex-direction: row;
+    height: auto;
 }
 
 .simply__container {
@@ -425,10 +443,7 @@ header {
     flex-direction: row;
 }
 
-.statistics__img {
-
-
-}
+.statistics__img {}
 
 
 
@@ -451,6 +466,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .container__card-top {
@@ -467,7 +483,6 @@ header {
 
 .container__card__checkbox {
     align-items: center;
-
 }
 
 .container__card-bottom {
@@ -476,8 +491,8 @@ header {
     justify-content: center;
 }
 
-.card__trial-body {
-    width: 300px;
+.card__trial-cards {
+    width: calc(100 / 3);
     margin: 1rem;
     text-align: left;
     background-color: white;
@@ -496,6 +511,14 @@ header {
     margin-bottom: 20px;
 }
 
+.card__trial-button {
+    /* why restano li  sinistra?*/
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 12px solid rgb(249, 250, 252);
+    border-radius: 5px;
+}
 
 /* FOOTER */
 
@@ -554,9 +577,10 @@ header {
     height: auto;
 }
 
+.footer__span {}
+
 svg {
     fill: rgb(55, 118, 226);
-
 }
 
 #request {
